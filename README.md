@@ -1,8 +1,8 @@
 # Elevator Control System Simulator
 
-A C++ distributed elevator control system simulator featuring separate Scheduler, Floor, and Elevator subsystems, capacity-limit handling, fault scenarios, performance tracking, and automated testing.
+A C++ distributed, multithreaded elevator control system simulator featuring separate Scheduler, Floor, and Elevator subsystems that communicate using datagram-based message passing.
 
-This project models how elevator requests are received, scheduled, assigned, executed, retried, and monitored in a multi-elevator system.
+The system models how elevator requests are received, scheduled, assigned, executed, retried, monitored, and tested in a multi-elevator environment. It includes scheduler coordination, elevator state management, capacity-limit handling, fault scenarios, performance instrumentation, and automated unit/integration testing.
 
 ## Demo Video
 
@@ -26,28 +26,37 @@ The system is divided into three main subsystems:
 ## Key Features
 
 - **Distributed subsystem architecture** with separate Floor, Scheduler, and Elevator components.
+- **Multithreaded execution model** using `std::thread` to run subsystem listeners, elevator execution, status updates, scheduler processing, and display updates concurrently.
+- **Datagram-based message passing** using custom `DatagramSocket` and `DatagramPacket` classes for communication between subsystems.
+- **Scheduler-driven request coordination** for assigning elevators to floor requests and tracking elevator availability, direction, state, and fault status.
+- **State-machine elevator behavior** for idle, moving, stopped, door/fault, and out-of-service states.
+- **Passenger capacity-limit handling** to prevent elevators from exceeding maximum capacity.
+- **Retry and reassignment logic** for requests that cannot be completed due to full elevators, unavailable elevators, or hard faults.
+- **Fault handling** for transient and hard fault scenarios, including recovery behavior and out-of-service marking.
 - **Real-time console display** showing elevator status, location, direction, and fault information.
-- **Passenger capacity limits** to prevent elevators from accepting more passengers than allowed.
-- **Retry logic** that allows passengers to wait and re-request service when elevators are full.
-- **Fault handling** for transient and hard fault scenarios.
-- **Performance metrics** including total elevator movements and total service time.
-- **Unit, integration, and acceptance testing** using Google Test.
+- **Performance instrumentation** for total movements, elapsed service time, and mean time per movement.
+- **Automated testing** using Google Test for unit, integration, and acceptance-level validation.
 
 ## My Contributions
 
-This was a team software engineering project. My main contributions included:
+This was a team software engineering project. My primary contributions focused on scheduler coordination, distributed system behavior, reliability, testing, and design documentation.
 
-- Implemented Scheduler logic for assigning elevators to floor requests.
-- Implemented passenger capacity-limit handling and retry logic when elevators became full.
-- Added unit and acceptance tests for scheduler behavior, capacity handling, fault scenarios, and request reassignment.
-- Updated and reviewed UML, sequence, and system diagrams across multiple iterations.
-- Contributed to debugging and integration across the Floor, Scheduler, and Elevator subsystems.
+- Designed and implemented core **Scheduler** logic for coordinating requests between the Floor and Elevator subsystems.
+- Worked on the project’s **distributed and multithreaded architecture**, where subsystem listeners, elevator execution, scheduler processing, status updates, and display updates run concurrently.
+- Implemented **passenger capacity-limit handling** to prevent elevators from exceeding maximum passenger capacity during high-load scenarios.
+- Developed **retry and reassignment logic** so requests could be re-queued when elevators were full, unavailable, or affected by hard faults.
+- Added and improved **unit, integration, and acceptance tests** using Google Test to validate scheduler behavior, capacity handling, transient faults, hard faults, request completion, and subsystem interactions.
+- Contributed to debugging and integration across the Scheduler, Floor, and Elevator components to ensure end-to-end request flow worked correctly.
+- Updated and reviewed system design documentation, including UML, sequence, timing, and state-machine diagrams across multiple project iterations.
+- Supported performance analysis by validating movement counts, elapsed service time, and system behavior under repeated controlled test runs.
 
 ## Technologies Used
 
 - **Languages:** C++, C
-- **Testing:** Google Test
-- **Concepts:** Distributed systems, scheduling, state machines, fault handling, system simulation, performance instrumentation
+- **Concurrency:** `std::thread`, `std::mutex`, `std::condition_variable`
+- **Communication:** Datagram sockets, message passing, subsystem listeners
+- **Testing:** Google Test, unit testing, integration testing, acceptance testing
+- **Concepts:** Distributed systems, scheduling, state machines, fault handling, retry logic, system simulation, performance instrumentation
 - **Tools:** Git, Linux/macOS terminal, g++
 
 ## Repository Structure
@@ -171,7 +180,7 @@ This allowed the system to report cumulative runtime and movement count during s
 
 ## Archived Iterations
 
-This project was developed across five course iterations. All five development iterations are preserved under the `iterations/` directory for reference. The final cleaned implementation is organized separately in `src/`, `include/`, and `tests/`.
+This project was developed across five course iterations. All five development stages are preserved under the `iterations/` directory for reference. The final cleaned implementation is organized separately in the main `src/`, `include/`, and `tests/` folders.
 
 ## Final Report
 
