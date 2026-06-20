@@ -1,0 +1,19 @@
+# ninja log v5
+2	2358	1739148589530365275	CMakeFiles/SYSC_3303_Elevator_Project.dir/Floor.cpp.o	d8a09288ca480cf4
+0	1191	1739149876567467095	CMakeFiles/SYSC_3303_Elevator_Project.dir/Elevator.cpp.o	39bdee96b2eaf803
+2	1407	1739149876773499771	CMakeFiles/SYSC_3303_Elevator_Project.dir/Scheduler.cpp.o	4911792555ed0e71
+2	1509	1739149876877608373	CMakeFiles/SYSC_3303_Elevator_Project.dir/main.cpp.o	39ea346ccca1c826
+1	1529	1739149876869214720	CMakeFiles/SYSC_3303_Elevator_Project.dir/Floor.cpp.o	d8a09288ca480cf4
+1530	1754	1739149877137715024	SYSC_3303_Elevator_Project	c6338cb00ebe92eb
+5	1023	1739163750096073894	CMakeFiles/SYSC_3303_Elevator_Project.dir/Elevator.cpp.o	39bdee96b2eaf803
+6	1138	1739163750213032251	CMakeFiles/SYSC_3303_Elevator_Project.dir/Scheduler.cpp.o	4911792555ed0e71
+5	1191	1739163750266365408	CMakeFiles/SYSC_3303_Elevator_Project.dir/Floor.cpp.o	d8a09288ca480cf4
+5	1224	1739163750300279804	CMakeFiles/SYSC_3303_Elevator_Project.dir/main.cpp.o	39ea346ccca1c826
+1224	1328	1739163750408347523	SYSC_3303_Elevator_Project	c6338cb00ebe92eb
+6	1398	1739164479843187274	CMakeFiles/SYSC_3303_Elevator_Project.dir/Floor.cpp.o	d8a09288ca480cf4
+1398	1546	1739164480001575691	SYSC_3303_Elevator_Project	c6338cb00ebe92eb
+14	1934	1739167961290979404	CMakeFiles/SYSC_3303_Elevator_Project.dir/Elevator.cpp.o	39bdee96b2eaf803
+15	2099	1739167961457261233	CMakeFiles/SYSC_3303_Elevator_Project.dir/Scheduler.cpp.o	4911792555ed0e71
+15	2232	1739167961595249932	CMakeFiles/SYSC_3303_Elevator_Project.dir/Floor.cpp.o	d8a09288ca480cf4
+15	2263	1739167961627805724	CMakeFiles/SYSC_3303_Elevator_Project.dir/main.cpp.o	39ea346ccca1c826
+2263	2364	1739167961740709289	SYSC_3303_Elevator_Project	c6338cb00ebe92eb

@@ -1,0 +1,16 @@
+# Ignore CMake build files
+CMakeFiles/
+CMakeCache.txt
+*.ninja
+*.cmake
+SYSC_3303_Elevator_Project
+Testing/
+build.ninja
+
+# Ignore IDE files (JetBrains/CLion)
+.idea/
+
+# Ignore other system files
+*.log
+*.tmp
+
